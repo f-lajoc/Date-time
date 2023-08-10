@@ -60,5 +60,7 @@ if (day > 3 && day < 21) {
 } else if(day == 3){
 	currentDayEl.innerHTML += " " + currentDate.getDate() + "RD";
 }
-
-  
+// let hour = currentDate.getDate();
+//   if (hour < 12){
+// 		body.style.backgroundImage = url("/images/night.png");
+// 	}
