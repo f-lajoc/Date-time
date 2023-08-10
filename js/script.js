@@ -48,10 +48,17 @@ secondsEl.innerHTML += " " + currentDate.getSeconds();
   //date append
 currentYearEl.innerHTML += " " + currentDate.getFullYear();
 currentMonthEl.innerHTML += " " + months[currentDate.getMonth()];
-// currentDayEl.innerHTML += " " + currentDate.getDate();
 currentWeekDayEl.innerHTML = " " + weekdays[currentDate.getDay()];
 
 let day = currentDate.getDate();
 if (day > 3 && day < 21) {
-  currentDayEl.innerHTML += " " + currentDate.getDate() + "TH";
+	currentDayEl.innerHTML += " " + currentDate.getDate() + "TH";
+} else if (day % 10 == 1) {
+	currentDayEl.innerHTML += " " + currentDate.getDate() + "ST";
+} else if (day % 10 == 2) {
+	currentDayEl.innerHTML += " " + currentDate.getDate() + "ND";
+} else if(day == 3){
+	currentDayEl.innerHTML += " " + currentDate.getDate() + "RD";
 }
+
+  
