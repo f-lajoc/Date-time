@@ -50,6 +50,7 @@ currentYearEl.innerHTML += " " + currentDate.getFullYear();
 currentMonthEl.innerHTML += " " + months[currentDate.getMonth()];
 currentWeekDayEl.innerHTML = " " + weekdays[currentDate.getDay()];
 
+//to add 1st, 2nd, 3rd and nth to the dates
 let day = currentDate.getDate();
 if (day > 3 && day < 21) {
 	currentDayEl.innerHTML += " " + currentDate.getDate() + "TH";
