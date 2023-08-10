@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!--for SEO-->
+		<meta name="description" content="date and time website" />
+		<meta name="keywords" content=" javascript built date time website" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- tailwind style linkage -->
+  <link href="/dist/main.css" rel="stylesheet">
+
+  <!-- Latest font awesome (6.4.0) -->
+  	<script src="https://kit.fontawesome.com/434622864a.js" crossorigin="anonymous"></script>
+  <title>Date-Time</title>
+</head>
+
+<body class="text-center m-2">
+  <header>
+<h1 class="text-2xl font-bold ">Date-Time</h1>
+<hr>
+  </header>
+
+<div  class="w-screen h-[80vh] flex flex-col justify-center items-center">
+<!-- main time -->
+  <h1 id="currentTime" class="text-3xl font-bold mb-3">Time</h1>
+<!-- container -->
+  <div class="my-6 border border-solid w-2/4 border-red-500">
+    
+
+<!-- breakdown of the date div -->
+<div class="flex p-3 justify-around items-center text-left">
+ 
+  <div>  <!-- date -->
+<p id="currentWeekDay" class="my-4 uppercase">Week-Day: </p>
+<p id="currentDay" class="my-4">DAY:  </p>
+<p id="currentMonth" class="my-4 uppercase">MONTH: </p>
+<p id="currentYear" class="mt-4">YEAR: </p>
+  </div>
+
+    <div>  <!-- time -->
+<p id="hours" class="my-4">HOUR(s): </p>
+<p id="minutes" class="my-4">MINUTE(s): </p>
+<p id="seconds" class="mt-4">SECOND(s): </p>
+  </div>
+
+
+</div>
+  </div>
+</div>
+  <footer>
+			<p class=" text-lg mt-8 mb-2 animate-pulse">Made by <a href="https://github.com/f-lajoc" class="text-color1">Lajoc_devs</a></p>
+		</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
