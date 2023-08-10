@@ -48,5 +48,10 @@ secondsEl.innerHTML += " " + currentDate.getSeconds();
   //date append
 currentYearEl.innerHTML += " " + currentDate.getFullYear();
 currentMonthEl.innerHTML += " " + months[currentDate.getMonth()];
-currentDayEl.innerHTML += " " + weekdays[currentDate.getDay()];
-currentWeekDayEl.innerHTML += " " + currentDate.getFullYear();
+// currentDayEl.innerHTML += " " + currentDate.getDate();
+currentWeekDayEl.innerHTML = " " + weekdays[currentDate.getDay()];
+
+let day = currentDate.getDate();
+if (day > 3 && day < 21) {
+  currentDayEl.innerHTML += " " + currentDate.getDate() + "TH";
+}
