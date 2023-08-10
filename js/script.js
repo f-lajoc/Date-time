@@ -11,3 +11,16 @@ let currentWeekDayEl = document.getElementById("currentWeekDay");
 let hoursEl = document.getElementById("hours");
 let minutesEl = document.getElementById("minutes");
 let secondsEl = document.getElementById("seconds");
+
+//DOM append
+currentTimeEl.innerHTML = currentDate.toLocaleTimeString();
+  //time append
+hoursEl.innerHTML += ": " + currentDate.getHours();
+minutesEl.innerHTML += ": " + currentDate.getMinutes();
+secondsEl.innerHTML += ": " + currentDate.getSeconds();
+
+  //date append
+currentYearEl.innerHTML += ": " + currentDate.getFullYear();
+currentMonthEl.innerHTML += ": " + currentDate.months[getFullYear()];
+currentDayEl.innerHTML += ": " + currentDate.getFullYear();
+currentWeekDayEl.innerHTML += ": " + currentDate.getFullYear();
