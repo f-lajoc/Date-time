@@ -1,13 +1,13 @@
- const currentDate = new Date();
+const currentDate = new Date();
 // DOM fetch
 const currentTimeEl = document.getElementById("currentTime");
-  //date
+//date
 let currentYearEl = document.getElementById("currentYear");
 let currentMonthEl = document.getElementById("currentMonth");
 let currentDayEl = document.getElementById("currentDay");
 let currentWeekDayEl = document.getElementById("currentWeekDay");
 
-  //time
+//time
 let hoursEl = document.getElementById("hours");
 let minutesEl = document.getElementById("minutes");
 let secondsEl = document.getElementById("seconds");
@@ -38,18 +38,13 @@ const weekdays = [
 	"Saturday",
 ];
 
-
-
-
-
-
 //DOM append
 currentTimeEl.innerText = currentDate.toLocaleTimeString();
 hoursEl.innerText += " " + currentDate.getHours();
 minutesEl.innerText += " " + currentDate.getMinutes();
 secondsEl.innerText += " " + currentDate.getSeconds();
 
-  //date append
+//date append
 currentYearEl.innerText += " " + currentDate.getFullYear();
 currentMonthEl.innerText += " " + months[currentDate.getMonth()];
 currentWeekDayEl.innerText = " " + weekdays[currentDate.getDay()];
@@ -62,7 +57,7 @@ if (day > 3 && day < 21) {
 	currentDayEl.innerText += " " + currentDate.getDate() + "ST";
 } else if (day % 10 == 2) {
 	currentDayEl.innerText += " " + currentDate.getDate() + "ND";
-} else if(day == 3){
+} else if (day == 3) {
 	currentDayEl.innerText += " " + currentDate.getDate() + "RD";
 }
 
@@ -74,6 +69,7 @@ function updateBackground() {
 	if (currentHour >= 6 && currentHour < 18) {
 		// Background for Daytime
 		body.style.backgroundImage = "url('/images/morning.png')";
+		body.style.textShadow = "2px 2px 4px black";
 	} else {
 		// Background for Nghttime
 		body.style.backgroundImage = "url('/images/night.jpg')";
