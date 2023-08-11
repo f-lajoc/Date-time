@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background-image: url("/images/morning.png"); 
- background-repeat: no-repeat;
+@font-face {
+	font-family: Clocker;
+	src: url("../Clocker.ttf");
 }

@@ -17,24 +17,32 @@
   <title>Date-Time</title>
 </head>
 
-<body class="text-center m-8">
-  <header>
-<h1 class="text-2xl font-bold ">Date-Time</h1>
-<hr>
+<body class="text-center text-white font-bold bg-no-repeat bg-cover">
+  <header class="flex flex-row justify-between text-xs my-4 p-2 shadow-md shadow-black">
+
+ <p class="font-Clocker">JO</p>   
+<h1 class="text-xs">Date-Time</h1>
+
+<div class="flex flex-row gap-x-5 text-white font-bold">
+  <p class=""><a href="https://www.linkedin.com/in/funmilola-b-b4044b13b"><i class="fa-brands fa-linkedin "></a></i></p>
+  <p><a href=" https://www.twitter.com/lajoc__"> <i class="fa fa-twitter"></i> </a></p>
+  <p><a href="https://www.instagram.com/lajoc_devs"> <i class="fa fa-instagram"></i>  </a> </p>
+</div> 
+
   </header>
 
-<div  class="w-screen h-[80vh] flex flex-col justify-center items-center">
+<div  class="w-screen h-[80vh] flex flex-col justify-center items-center shadow-black shadow-xl">
 <!-- main time -->
   <h1 id="currentTime" class="text-3xl font-bold mb-3">Time</h1>
 <!-- container -->
-  <div class="my-6 border border-solid w-2/4 border-red-500">
+  <div class="my-6 py-2 w-2/4 shadow-indigo-950 shadow-lg">
     
 
 <!-- breakdown of the date div -->
-<div class="flex p-3 justify-around items-center text-left">
+<div class="flex  p-3 justify-around items-end text-left">
  
   <div>  <!-- date -->
-<p id="currentWeekDay" class="my-4 uppercase">Week-Day: </p>
+<p id="currentWeekDay" class="my-4 text-green-400 uppercase">Week-Day: </p>
 <p id="currentDay" class="my-4">DAY:  </p>
 <p id="currentMonth" class="my-4 uppercase">MONTH: </p>
 <p id="currentYear" class="mt-4">YEAR: </p>
@@ -51,7 +59,7 @@
   </div>
 </div>
   <footer>
-			<p class=" text-lg mt-8 mb-2 animate-pulse">Made by <a href="https://github.com/f-lajoc" class="text-color1">Lajoc_devs</a></p>
+			<p class=" text-base mt-5 mb-2 animate-pulse">Made by <a href="https://github.com/f-lajoc" class="text-color1">Lajoc_devs</a></p>
 		</footer>
 
     <script src="js/script.js"></script>

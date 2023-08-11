@@ -38,30 +38,46 @@ const weekdays = [
 	"Saturday",
 ];
 
+
+
+
+
+
 //DOM append
-currentTimeEl.innerHTML = currentDate.toLocaleTimeString();
-  //time append
-hoursEl.innerHTML += " " + currentDate.getHours();
-minutesEl.innerHTML += " " + currentDate.getMinutes();
-secondsEl.innerHTML += " " + currentDate.getSeconds();
+currentTimeEl.innerText = currentDate.toLocaleTimeString();
+hoursEl.innerText += " " + currentDate.getHours();
+minutesEl.innerText += " " + currentDate.getMinutes();
+secondsEl.innerText += " " + currentDate.getSeconds();
 
   //date append
-currentYearEl.innerHTML += " " + currentDate.getFullYear();
-currentMonthEl.innerHTML += " " + months[currentDate.getMonth()];
-currentWeekDayEl.innerHTML = " " + weekdays[currentDate.getDay()];
+currentYearEl.innerText += " " + currentDate.getFullYear();
+currentMonthEl.innerText += " " + months[currentDate.getMonth()];
+currentWeekDayEl.innerText = " " + weekdays[currentDate.getDay()];
 
 //to add 1st, 2nd, 3rd and nth to the dates
 let day = currentDate.getDate();
 if (day > 3 && day < 21) {
-	currentDayEl.innerHTML += " " + currentDate.getDate() + "TH";
+	currentDayEl.innerText += " " + currentDate.getDate() + "TH";
 } else if (day % 10 == 1) {
-	currentDayEl.innerHTML += " " + currentDate.getDate() + "ST";
+	currentDayEl.innerText += " " + currentDate.getDate() + "ST";
 } else if (day % 10 == 2) {
-	currentDayEl.innerHTML += " " + currentDate.getDate() + "ND";
+	currentDayEl.innerText += " " + currentDate.getDate() + "ND";
 } else if(day == 3){
-	currentDayEl.innerHTML += " " + currentDate.getDate() + "RD";
+	currentDayEl.innerText += " " + currentDate.getDate() + "RD";
 }
-// let hour = currentDate.getDate();
-//   if (hour < 12){
-// 		body.style.backgroundImage = url("/images/night.png");
-// 	}
+
+//To change background based on time
+function updateBackground() {
+	const currentHour = currentDate.getHours();
+	const body = document.body;
+
+	if (currentHour >= 6 && currentHour < 18) {
+		// Background for Daytime
+		body.style.backgroundImage = "url('/images/morning.png')";
+	} else {
+		// Background for Nghttime
+		body.style.backgroundImage = "url('/images/night.jpg')";
+		body.style.textShadow = "2px 2px 4px black";
+	}
+}
+updateBackground();
